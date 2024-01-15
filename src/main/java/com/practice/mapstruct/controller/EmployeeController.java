@@ -1,7 +1,7 @@
 package com.practice.mapstruct.controller;
 
-import com.practice.mapstruct.Entity.Employee;
-import com.practice.mapstruct.Entity.EmployeeDto;
+import com.practice.mapstruct.model.Employee;
+import com.practice.mapstruct.model.EmployeeDto;
 import com.practice.mapstruct.service.EmployeeServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,10 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/employee")
+//@RequiredArgsConstructor
 public class EmployeeController {
 
     @Autowired
-    private EmployeeServiceImpl employeeServiceImpl;
+    private  EmployeeServiceImpl employeeServiceImpl;
 
     @PostMapping("/createEmployee")
     public ResponseEntity<Employee> createEmployee(@RequestBody EmployeeDto employeeDto){

@@ -1,15 +1,12 @@
-package com.practice.mapstruct.Entity;
+package com.practice.mapstruct.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -19,8 +16,9 @@ import java.util.Date;
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name = "emp_id")
+    private Long empId;
 
     private String name;
 
@@ -30,5 +28,5 @@ public class Employee {
 
     private Integer projectId;
 
-    private Date createdDate;
+    private LocalDateTime createdDate;
 }

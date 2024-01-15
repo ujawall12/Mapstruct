@@ -1,6 +1,6 @@
 package com.practice.mapstruct.repository;
 
-import com.practice.mapstruct.Entity.Employee;
+import com.practice.mapstruct.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

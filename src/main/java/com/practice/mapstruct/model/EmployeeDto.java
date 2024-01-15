@@ -1,4 +1,4 @@
-package com.practice.mapstruct.Entity;
+package com.practice.mapstruct.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
